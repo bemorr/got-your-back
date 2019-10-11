@@ -2166,3 +2166,8 @@ if __name__ == '__main__':
     except NameError:
       pass
     sys.exit(4)
+for label in labels:
+            #FITZ-20180725 - scrub LF and CR from label
+            label=label.replace('\n','').replace('\r','')
+            #
+            if label.lower() in reserved_labels:
